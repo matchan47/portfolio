@@ -1,0 +1,871 @@
+* {
+  box-sizing: border-box;
+  /* border: solid 1px black; */
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: "Hiragino Kaku Gothic ProN";
+  font-family: 'Noto Serif JP', sans-serif;
+  width: 100%;
+  height: 100%;
+}
+
+body.fixed {
+  width: 100%;
+  position: fixed;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  margin-block-start: 0px;
+  margin-block-end: 0px;
+  padding-inline-start: 0px;
+}
+
+h2 {
+  font-weight: normal;
+  margin-block-start: 0px;
+  margin-block-end: 0px;
+  text-align: center;
+}
+
+h3 {
+  font-weight: normal;
+  margin-block-start: 0px;
+  margin-block-end: 0px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.white {
+  color: #FFF;
+}
+
+/*==========ここからヘッダー==========*/
+
+header {
+  width: 100%;
+  background-color: rgba(255, 255, 255);
+  top: 0;
+  z-index: 20;
+  position: fixed;
+}
+
+.header_container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1104px;
+}
+
+.header_left {
+  display: inline-block;
+}
+
+.header_right {
+  width: 100%;
+}
+
+.water_btn.header_btn {
+  color: #FFF;
+  font-size: 1.6rem;
+  padding: 5% 11.4%;
+  border-radius: 3rem;
+}
+
+.right_list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  width: 100%;
+  margin-left: 5%;
+}
+
+.right_list li:not(:last-child) {
+  margin-right: 5%;
+}
+
+.right_list li:last-child {
+  width: 35%;
+}
+
+.right_list li a {
+  color: #52330D;
+  transition: all 2s;
+  font-family: 'Noto Serif JP', sans-serif;
+  font-size: 1.5rem;
+}
+
+.right_list a:hover {
+  color: #B17F43;
+}
+
+.toggle_btn {
+  display: block;
+  position: static;
+  width: 40px;
+  transition: all .5s;
+  cursor: pointer;
+  z-index: 40;
+  margin-right: 5%;
+}
+
+.toggle_btn span{
+  display: block;
+  position: static;
+  width: 40px;
+  height: 3px;
+  background-color: #F5A629;
+  border-radius: 4px;
+  transition: all 0.5s;
+}
+
+.toggle_btn span:nth-child(1) {
+  margin-top: 0px;
+}
+.toggle_btn span:nth-child(2) {
+  margin-top: 10px;
+}
+.toggle_btn span:nth-child(3) {
+  margin-top: 10px;
+}
+.open .toggle_btn span {
+  background-color: #F5A629;
+}
+.open .toggle_btn span:nth-child(1) {
+  -webkit-transform: translateY(12px) rotate(-315deg);
+  transform: translateY(12px) rotate(-315deg);
+}
+.open .toggle_btn span:nth-child(2) {
+  opacity: 0;
+}
+.open .toggle_btn span:nth-child(3) {
+  -webkit-transform: translateY(-15px) rotate(315deg);
+  transform: translateY(-15px) rotate(315deg);
+}
+
+/* 836px */
+#kv_section {
+  background-image: url("./img/kv_background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  height: 100vh;
+}
+
+.kv_container {
+  max-width: 1104px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 120px 0 0 0;
+}
+
+.kv_inner {
+  background-color: rgba(255, 255, 255, 0.8);
+  margin-left: auto;
+  width: 50%;
+}
+
+.kv_inner_text {
+  color: #4c4842;
+  font-family: 'Noto Serif JP', sans-serif;
+  font-weight: bold;
+  font-size: 5rem;
+  margin-left: 3.9%;
+  margin-top: 20%;
+  padding: 10% 0;
+  text-align: center;
+}
+
+#works_section {
+  background-color: #294652;
+  position: relative;
+}
+
+.title_container {
+  max-width: 1312px;
+  height: 100%;
+  margin: 0 auto;
+  padding-top: 100px;
+}
+
+.section_bg_title p {
+  color: #e3e7e7;
+  display: block;
+  font-size: 10rem;
+  font-weight: bold;
+  margin-block-start: 0px;
+  margin-block-end: 0px;
+  width: 50%;
+}
+
+.section_title {
+  font-size: 3rem;
+  margin-top: -10%;
+}
+
+.work_area {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: nowrap;
+  margin-top: 5%;
+}
+
+.work_area_rev {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: nowrap;
+  margin-top: 5%;
+}
+
+.work_area .work_img {
+  border-radius: 27% 43% 34% 37% / 46% 42% 41% 29% ;
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
+
+.work_area_rev .work_img {
+  border-radius: 27% 43% 34% 21% / 46% 42% 41% 29%;
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
+
+.work_text_right {
+  position: relative;
+  display: inline-block;
+  margin: 1.5em 0 1.5em 15px;
+  padding: 15px 10px;
+  min-width: 120px;
+  max-width: 100%;
+  color: #555;
+  font-family: "Hiragino Kaku Gothic ProN";
+  font-size: 14px;
+  font-weight: bold;
+  background: #fff;
+  border-radius: 15px;
+}
+
+.work_text_right::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -50px;
+  margin-top: -15px;
+  border: 15px solid transparent;
+  border-right: 40px solid #fff;
+}
+
+.work_text_left {
+  position: relative;
+  display: inline-block;
+  margin: 1.5em 0 1.5em 15px;
+  padding: 15px 10px;
+  min-width: 120px;
+  max-width: 100%;
+  color: #555;
+  font-family: "Hiragino Kaku Gothic ProN";
+  font-size: 14px;
+  font-weight: bold;
+  background: #fff;
+  border-radius: 15px;
+}
+
+.work_text_left::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -50px;
+  margin-top: -15px;
+  border: 15px solid transparent;
+  border-left: 40px solid #fff;
+}
+
+.work_text_title {
+  font-size: 1.25rem;
+  text-align: center;
+}
+
+.work_text_title span {
+  border-bottom: 3px solid orange;
+}
+
+.campaign_container_first {
+  max-width: 1104px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 180px 0 220px 0;
+}
+
+.campaign_btn_wrap {
+  text-align: center;
+  margin-top: 10%;
+}
+
+.campaign_btn {
+  font-family: 'Noto Serif JP', sans-serif;
+  font-size: 2.8rem;
+  font-weight: bold;
+  position: static;
+  text-align: center;
+  width: 42.9%;
+}
+
+.campaign_btn_triangle {
+  margin-left: 5%;
+  margin-bottom: -1%;
+}
+
+.water_btn.campaign_btn {
+  padding: 3.5% 7%;
+  border-radius: 5rem;
+}
+
+#contact_section {
+  background-color: #294652;
+  position: relative;
+}
+
+.contact_container {
+  max-width: 1312px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 0 220px 0;
+}
+
+.profile_container_top {
+  max-width: 1104px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 180px 0 0 0;
+}
+
+.profile_container_bottom {
+  max-width: 1104px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 0 180px 0;
+}
+
+.profile_area {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: nowrap;
+  margin-top: 5%;
+  margin-bottom: 20%;
+}
+
+.profile_area .profile_img {
+  border-radius: 50%;
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
+
+.profile_text {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  display: inline-block;
+  margin: 1.5em 0 1.5em 15px;
+  padding: 15px 20px;
+  min-width: 120px;
+  max-width: 100%;
+  color: #333333;
+  font-family: "Hiragino Kaku Gothic ProN";
+  font-size: 14px;
+  font-weight: bold;
+  background: #5ae628;
+  border-radius: 15px;
+}
+
+.profile_text::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -50px;
+  margin-top: -15px;
+  border: 15px solid transparent;
+  border-right: 40px solid #5ae628;
+}
+
+.skill_area {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: nowrap;
+  margin-top: 5%;
+}
+
+.skill_item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 160px;
+  height: 160px;
+    /* 4つの角を丸める
+  水平方向の半径：左上から時計回りに、40%、60%、40%、50%
+  垂直方向の半径：左上から時計回りに、60%、60%、50%、60%
+  */
+  border-radius: 40% 60% 40% 50% / 60% 60% 50% 60%;
+}
+
+.skill_html {
+  background: #e85628;
+}
+
+.skill_css {
+  background: #2683c1;
+}
+
+.skill_js {
+  background: #e4c234;
+}
+
+.skill_wordpress {
+  background: #21749b;
+}
+
+.skill_wix {
+  background: black;
+}
+
+.skill_jimdo {
+  background: #010334;
+}
+
+.skill_text {
+  color: #FFF;
+  font-family: "Hiragino Kaku Gothic ProN";
+  font-size: 1.5rem;
+  margin: 0 auto;
+}
+
+footer {
+  position: relative;
+  width: 100%;
+}
+
+.footer_container {
+  max-width: 1104px;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  padding-bottom: 22px;
+}
+
+.footer_middle_section {
+  width: 100%;
+  height: 100%;
+}
+
+.footer_middle_contents {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  margin-top: 6%;
+}
+
+.footer_logo {
+  position: static;
+  margin-top: -5%;
+  width: 35%;
+}
+
+.footer_list {
+  position: static;
+  margin-top: -3%;
+  margin-left: 3%;
+  width: 50%;
+}
+
+.footer_list li {
+  list-style: none;
+}
+
+.footer_list li:not(:last-child) {
+  margin-bottom: 27px;
+}
+
+.footer_list li a {
+  color: #101010;
+  font-family: 'Noto Serif JP', sans-serif;
+  font-size: 1.5rem;
+}
+
+.footer_company_info {
+  font-family: 'Noto Serif JP', sans-serif;
+  font-size: 1.5rem;
+  position: static;
+  margin: 13% 0 0 0;
+  width: 100%;
+}
+
+.footer_company_info li {
+  list-style: none;
+}
+
+.footer_company_info li:not(:last-child) {
+  margin-bottom: 5%;
+}
+
+.copyright {
+  font-family: 'Noto Serif JP', sans-serif;
+  font-size: 1.25rem;
+  position: static;
+  text-align: center;
+  margin-top: 5%;
+  padding-bottom: 2.5%;
+}
+
+.water_btn {
+  padding: 1rem;
+  border: 3px solid #F5A629;
+  border-radius: 2rem;
+  cursor: pointer;
+  background-image: radial-gradient(circle at 50% 0, #F5A629 0%, #F5A629 50%, #008CFF 50%, #008CFF 100%); /* オレンジの範囲を0~50%まで、それより外は青 */
+  background-size: 200% 400%; /* 幅100%, 高さ 400% */
+  background-repeat: no-repeat; /* 背景画像を繰り返さない */
+  background-position: 50% 0%;
+  color: #FFF;
+  transition: all 1.5s; /* 1.5秒かけて滑らかに切り替わる */
+}
+
+.clear {
+  clear: left;
+}
+
+/*** レスポンシブ ***/
+
+@media screen and (min-width: 481px) {
+  .toggle_btn {
+    display: none;
+  }
+
+  .sp_product_beer {
+    display: none;
+  }
+}
+
+@media all and (max-width: 480px) {
+
+  .header_container {
+    max-width: 448px;
+  }
+
+  .header_left a {
+    display: block;
+  }
+
+  .header_logo {
+    width: 40%;
+    margin-left: 3%;
+    margin-top: 10%;
+  }
+
+  .right_list {
+    /* opacity: 0; */
+    height: 66vh;
+    display: block;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.95);
+    /* transition: all 0.8s linear; */
+    transition: all .7s;;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: fixed;
+    text-align: center;
+    top: 0;
+    /* リストの位置を top ではなく padding-top の空白を使って調節 */
+    padding-top: 23%;
+    /* left: 50%; */
+    right: -150%;
+    width: 70%;
+    transform: translate(-50%);
+    z-index: 30;
+  }
+
+  .open .right_list {
+    right: -35%;
+  }
+
+  .right_list li:not(:last-child) {
+    margin-right: 40px;
+    margin-left: 40px;
+    margin-bottom: 32px;
+    font-size: 1.5rem;
+  }
+
+  .right_list a {
+    color: #52330D;
+    font-size: 1.5rem;
+    text-decoration: none;
+    font-family: 'Noto Serif JP', sans-serif;
+  }
+
+  .right_list li:nth-last-of-type(2) {
+    margin-top: 2%;
+    margin-left: 0%;
+    margin-bottom: 30%;
+    width: 100%;
+  }
+
+  .right_list li:nth-last-of-type(3) {
+    font-size: 1.25rem;
+    margin-bottom: 20%;
+  }
+
+  .right_list li:last-child {
+    width: 100%;
+  }
+
+  .water_btn.header_btn {
+    font-size: 1.3rem;
+    padding: 15px 30px;
+  }
+
+  #kv_section {
+    background-size: cover;
+    background-position: 20% center;
+    height: 100vh; /* 854px */
+  }
+
+  .kv_container {
+    padding: 88px 0 0 0;
+    max-width: 448px;
+  }
+
+  .kv_text_wrap {
+    margin: 25% 0 0 5%;
+  }
+
+  .kv_slogan {
+    width: 94%;
+    height: 62px;
+    margin: 0 3%;
+  }
+
+  .kv_message {
+    font-size: 1.3rem;
+    font-weight: normal;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .kv_inner {
+    width: 100%;
+  }
+
+  .kv_inner_text {
+    font-size: 3rem;
+    margin-left: 0%;
+    margin-top: 50%;
+  }
+
+  .mv_bottle {
+    display: block;
+    margin-top: 10%;
+    margin-left: 10%;
+    margin-bottom: 3.5vh;
+    object-fit: cover;
+    width: 80%;
+    height: 60%;
+  }
+
+  .title_container {
+    padding-top: 100px;
+  }
+
+  .work_area {
+    flex-flow: column;
+    margin-top: 10%;
+  }
+
+  .work_area_rev {
+    flex-direction: column-reverse;
+    margin-top: 10%;
+  }
+
+  .section_bg_title p {
+    font-size: 4rem;
+    text-align: center;
+    width: 100%;
+  }
+
+  .campaign_container_first {
+    max-width: 400px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 100px 0;
+  }
+
+  .campaign_btn {
+    font-size: 1.5rem;
+  }
+
+  .campaign_btn_triangle {
+    width: 7%;
+    height: 50%;
+    margin-bottom: -2%;
+  }
+
+  .water_btn.campaign_btn {
+    display: inline-block;
+    width: 80%;
+  }
+
+  .profile_top {
+    max-width: 400px;
+    padding: 100px 0 0 0;
+  }
+
+  .profile_container_bottom {
+    max-width: 400px;
+    padding: 0 0 100px 0;
+  }
+
+  .work_text_right {
+    margin: 1.5em 15px;
+  }
+
+  .work_text_right::after {
+    content: "";
+    position: absolute;
+    top: -25px;
+    left: 75%;
+    margin-left: -15px;
+    border: 15px solid transparent;
+    border-bottom: 40px solid #fff;
+  }
+
+  .work_text_left {
+    margin: 1.5em 15px;
+  }
+
+  .work_text_left::after {
+    content: "";
+    position: absolute;
+    top: -25px;
+    right: 15%;
+    border: 15px solid transparent;
+    border-bottom: 40px solid #fff;
+  }
+
+  .profile_area {
+    flex-direction: column;
+  }
+
+  .profile_text {
+    margin-top: 10%;
+    width: 80%;
+  }
+
+  .profile_text::after {
+    content: "";
+    position: absolute;
+    top: -25px;
+    left: 75%;
+    margin-left: -15px;
+    border: 15px solid transparent;
+    border-bottom: 40px solid #5ae628;
+  }
+
+  .skill_area {
+    flex-direction: column;
+  }
+
+  .skill_item {
+    margin-top: 10%;
+  }
+
+  .contact_container {
+    max-width: 400px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 0 100px 0;
+  }
+
+  .profile_container_top {
+    padding-top: 100px;
+  }
+
+  .sp_product_beer {
+    display: inline-block;
+    margin-top: 5%;
+  }
+
+  .about_company {
+    width: 69%;
+    margin: 0 0 0 auto;
+  }
+
+  .fix_bg {
+    background-position: left top;
+    background-size: 82.3%;
+  }
+
+  .footer_middle_contents {
+    display: inline-block;
+  }
+
+  .footer_logo {
+    float: left;
+    width: 25%;
+    margin-top: 12%;
+    margin-left: 10%;
+  }
+
+  .footer_list {
+    float: none;
+    margin: 3% 0 0 50%;
+  }
+
+  .footer_list li a {
+    font-size: 1.125rem;
+  }
+
+  .footer_company_info {
+    font-size: 0.875rem;
+    margin-top: 6%;
+  }
+
+  .footer_company_info li {
+    text-align: center;
+  }
+
+  .footer_company_info li:not(:last-child) {
+    margin-bottom: 2.5%;
+  }
+
+  .footer_container {
+    max-width: 448px;
+  }
+
+  .copyright {
+    font-size: 0.8125rem;
+    margin-top: 0%;
+  }
+}
