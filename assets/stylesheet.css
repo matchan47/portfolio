@@ -130,7 +130,7 @@ header {
   position: static;
   width: 40px;
   height: 3px;
-  background-color: #F5A629;
+  background-color: #E1986E;
   border-radius: 4px;
   transition: all 0.5s;
 }
@@ -145,7 +145,7 @@ header {
   margin-top: 10px;
 }
 .open .toggle_btn span {
-  background-color: #F5A629;
+  background-color: #E1986E;
 }
 .open .toggle_btn span:nth-child(1) {
   -webkit-transform: translateY(12px) rotate(-315deg);
@@ -543,10 +543,10 @@ footer {
 
 .water_btn {
   padding: 1rem;
-  border: 3px solid #F5A629;
+  border: 3px solid #E1986E;
   border-radius: 2rem;
   cursor: pointer;
-  background-image: radial-gradient(circle at 50% 0, #F5A629 0%, #F5A629 50%, #008CFF 50%, #008CFF 100%); /* オレンジの範囲を0~50%まで、それより外は青 */
+  background-image: radial-gradient(circle at 50% 0, #E1986E 0%, #E1986E 50%, #008CFF 50%, #008CFF 100%); /* オレンジの範囲を0~50%まで、それより外は青 */
   background-size: 200% 400%; /* 幅100%, 高さ 400% */
   background-repeat: no-repeat; /* 背景画像を繰り返さない */
   background-position: 50% 0%;
