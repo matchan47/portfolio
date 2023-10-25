@@ -306,7 +306,7 @@ header {
 }
 
 .work_text_title span {
-  border-bottom: 3px solid orange;
+  border-bottom: 3px dashed #E1986E;
 }
 
 .campaign_container_first {
