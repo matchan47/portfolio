@@ -220,6 +220,10 @@ header {
   margin-top: -10%;
 }
 
+.skill {
+  margin-top: 0%;
+}
+
 .work_area {
   display: flex;
   align-items: center;
@@ -372,7 +376,7 @@ header {
   justify-content: space-evenly;
   flex-wrap: nowrap;
   margin-top: 5%;
-  margin-bottom: 20%;
+  margin-bottom: 5%;
 }
 
 .profile_area .profile_img {
@@ -397,6 +401,7 @@ header {
   font-weight: bold;
   background: #5ae628;
   border-radius: 15px;
+  align-self: start;
 }
 
 .profile_text::after {
@@ -407,6 +412,13 @@ header {
   margin-top: -15px;
   border: 15px solid transparent;
   border-right: 40px solid #5ae628;
+}
+
+.profile_sns {
+  margin-top: -12%;
+  margin-left: auto;
+  margin-bottom: 10%;
+  width: 37%;
 }
 
 .skill_area {
@@ -781,6 +793,7 @@ footer {
   .profile_text {
     margin-top: 10%;
     width: 80%;
+    align-self: center;
   }
 
   .profile_text::after {
@@ -791,6 +804,12 @@ footer {
     margin-left: -15px;
     border: 15px solid transparent;
     border-bottom: 40px solid #5ae628;
+  }
+
+  .profile_sns {
+    margin-top: 0%;
+    text-align: center;
+    width: 100%;
   }
 
   .skill_area {
